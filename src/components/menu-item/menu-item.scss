@@ -1,17 +1,3 @@
-.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 80px;
-}
-
-.directory-menu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .menu-item {
   min-width: 30%;
   height: 240px;
@@ -43,12 +29,13 @@
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
-      color: #4a4a4a;
+      color: #c07a7a;
     }
 
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+      color: #024272;
     }
   }
 }
