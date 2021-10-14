@@ -52,7 +52,7 @@ class Directory extends Component {
     return (
       <div className="directory-menu">
         {this.state.sections.map(({ id, ...restOfProp }) => {
-          return <MenuItem key={id} />;
+          return <MenuItem key={id} {...restOfProp} />;
         })}
       </div>
     );
