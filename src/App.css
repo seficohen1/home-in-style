@@ -2,3 +2,9 @@ body {
   font-family: 'Dancing Script', cursive;
   padding: 20px 60px
 }
+
+a {
+  text-decoration: none;
+  color: #4d3030;
+
+}

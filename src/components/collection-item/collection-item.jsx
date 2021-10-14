@@ -15,7 +15,6 @@ const CollectionItem = ({ id, name, price, imageUrl }) => {
         <span className="price">
           {price} <i className="fas fa-euro-sign"></i>
         </span>
-        <i className="fas fa-euro-sign"></i>
       </div>
     </div>
   );
