@@ -8,3 +8,7 @@ a {
   color: #4d3030;
 
 }
+
+* {
+  box-sizing: border-box;
+}
