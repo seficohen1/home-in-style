@@ -1,7 +1,11 @@
 .sign-in {
-  width: 380px;
+  width: 450px;
   display: flex;
   flex-direction: column;
+
+  .form {
+    width: 300px;
+  }
 
   .title {
     margin: 10px 0;
