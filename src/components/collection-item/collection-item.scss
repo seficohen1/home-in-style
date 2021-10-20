@@ -5,6 +5,25 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
+
+  .custom-button {
+    width: 80%;
+    opacity: 0.7;
+    position: absolute;
+    top: 255px;
+    display: none;
+    }
+    &:hover {
+      .image {
+        opacity: 0.8;
+      }
+      .custom-button {
+        opacity: 0.8;
+        display: flex;
+      }
+
+  }
 
   .image {
     width: 100%;

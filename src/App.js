@@ -8,7 +8,7 @@ import StorePage from './views/storepage.jsx';
 import Header from './components/header/header';
 import SignInSignOut from './views/sign-in-up';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import { setCurrentUser } from './redux/user/user.actions';
+import setCurrentUser from './redux/user/user.actions';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
