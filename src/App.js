@@ -5,6 +5,7 @@ import './App.test';
 import './App.css';
 import HomePage from './views/homepage';
 import StorePage from './views/storepage.jsx';
+import Checkout from './views/checkout';
 import Header from './components/header/header';
 import SignInSignOut from './views/sign-in-up';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
@@ -49,6 +50,7 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/" /> : <SignInSignOut />
             }
           />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );
