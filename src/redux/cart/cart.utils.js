@@ -13,7 +13,7 @@ const addItemToCart = (cartItemsArray, cartItemToAdd) => {
   return [...cartItemsArray, { ...cartItemToAdd, quantity: 1 }];
 };
 
-export const decreaseItem = (cartItemsArray, itemToDecrease) => {
+const decreaseItem = (cartItemsArray, itemToDecrease) => {
   const exsistingCartItem = cartItemsArray.find(
     (cartItem) => cartItem.id === itemToDecrease.id
   );
@@ -29,4 +29,5 @@ export const decreaseItem = (cartItemsArray, itemToDecrease) => {
       : cartItem
   );
 };
-export default addItemToCart;
+
+export { addItemToCart, decreaseItem };

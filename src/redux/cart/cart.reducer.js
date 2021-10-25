@@ -1,6 +1,6 @@
 import CartActionTypes from './cart.types';
-import addItemToCart from './cart.utils';
-import decreaseItem from './cart.utils';
+import { addItemToCart } from './cart.utils';
+import { decreaseItem } from './cart.utils';
 
 const INITIAL_STATE = {
   hidden: true,
