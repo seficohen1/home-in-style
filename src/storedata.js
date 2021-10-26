@@ -1,5 +1,5 @@
-const STORE_DATA = [
-  {
+const STORE_DATA = {
+  bedroom: {
     id: 1,
     title: 'BEDROOM',
     routeName: 'bedroom',
@@ -66,7 +66,7 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  bathroom: {
     id: 2,
     title: 'BATHROOM',
     routeName: 'bathroom',
@@ -133,7 +133,7 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  kitchen: {
     id: 3,
     title: 'KITCHEN',
     routeName: 'kitchen',
@@ -200,7 +200,7 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  'outdoor&more': {
     id: 4,
     title: 'OUTDOOR & MORE',
     routeName: 'outdoor&more',
@@ -267,7 +267,7 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  livingroom: {
     id: 5,
     title: 'LIVING ROOM',
     routeName: 'livingroom',
@@ -334,6 +334,6 @@ const STORE_DATA = [
       },
     ],
   },
-];
+};
 
 export default STORE_DATA;
