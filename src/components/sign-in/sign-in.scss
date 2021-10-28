@@ -2,6 +2,7 @@
   width: 450px;
   display: flex;
   flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
 
   .form {
     width: 300px;
@@ -14,5 +15,6 @@
   .buttons {
     display: flex;
     justify-content: space-between;
+    
   }
 }

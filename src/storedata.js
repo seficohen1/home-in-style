@@ -217,7 +217,7 @@ const STORE_DATA = {
         name: 'Respira Smart Air-Purifying Garden',
         imageUrl:
           'https://i.ibb.co/gtvFhy1/Respira-smart-air-purifying-garden-03.webp',
-        price: 1200,
+        price: 999,
       },
       {
         id: 2,
