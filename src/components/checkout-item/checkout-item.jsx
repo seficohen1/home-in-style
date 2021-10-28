@@ -6,6 +6,8 @@ import {
   addItem,
   decreaseItem,
 } from '../../redux/cart/cart.actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEuroSign } from '@fortawesome/free-solid-svg-icons';
 
 const CheckoutItem = ({ cartItem, removeItem, decreaseItem, addItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
@@ -25,7 +27,8 @@ const CheckoutItem = ({ cartItem, removeItem, decreaseItem, addItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">${price}</span>
+      <FontAwesomeIcon icon={faEuroSign} />
+      <span className="price"> {price}</span>
       <div className="remove-button" onClick={() => removeItem(cartItem)}>
         &#10007;
       </div>

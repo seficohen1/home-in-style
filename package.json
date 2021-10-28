@@ -31,7 +31,10 @@
     "redux-logger": "3.0.6",
     "reselect": "4.0.0",
     "react-stripe-checkout": "2.6.3",
-    "redux-persist": "5.10.0"
+    "redux-persist": "5.10.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16"
   },
   "scripts": {
     "start": "react-scripts start",
