@@ -3,6 +3,7 @@
   display: flex;
   height: 80px;
   margin-bottom: 15px;
+  font-family: 'Ubuntu', sans-serif;
 
   img {
     width: 30%;
@@ -17,7 +18,7 @@
     padding: 10px 20px;
 
     .name {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 }
