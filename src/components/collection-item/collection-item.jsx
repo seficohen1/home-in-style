@@ -1,6 +1,6 @@
 import React from 'react';
 import './collection-item.scss';
-import CustomButton from '../custom-button/custom-buttom';
+import CustomButton from '../custom-button/custom-button';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

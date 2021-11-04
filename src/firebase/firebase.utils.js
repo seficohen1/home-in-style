@@ -12,6 +12,9 @@ const config = {
   measurementId: 'G-WM9N5SJXN2',
 };
 
+// Initialize Firebase
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, data) => {
   if (!userAuth) {
     return;
@@ -38,8 +41,35 @@ export const createUserProfileDocument = async (userAuth, data) => {
   return userRef;
 };
 
-// Initialize Firebase
-firebase.initializeApp(config);
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRaf = firestore.collection(collectionKey);
+
+  const batch = firestore.batch();
+  objectsToAdd.forEach((object) => {
+    const newDocRef = collectionRaf.doc();
+    batch.set(newDocRef, object);
+  });
+  return await batch.commit();
+};
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((doc) => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  }, {});
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
