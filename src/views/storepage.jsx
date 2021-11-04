@@ -2,7 +2,10 @@ import React from 'react';
 import CollectionOverview from '../components/collections-overview/collections-overview';
 import { Route } from 'react-router-dom';
 import CollectionPage from './collectionpage';
-import { selectIsCollectionFetching } from '../redux/shop/shop.selector';
+import {
+  selectIsCollectionFetching,
+  selectIsCollectionLoaded,
+} from '../redux/shop/shop.selector';
 
 import { connect } from 'react-redux';
 import { fetchCollectionStartAsync } from '../redux/shop/shop.actions';
@@ -19,7 +22,7 @@ class StorePage extends React.Component {
   }
 
   render() {
-    const { isCollectionFectching, match } = this.props;
+    const { isCollectionLoaded, match } = this.props;
     return (
       <div className="store-page">
         <Route
@@ -27,7 +30,7 @@ class StorePage extends React.Component {
           path={`${match.path}`}
           render={(props) => (
             <CollectionOverviewWithSpinner
-              isLoading={isCollectionFectching}
+              isLoading={!isCollectionLoaded}
               {...props}
             />
           )}
@@ -36,7 +39,7 @@ class StorePage extends React.Component {
           path={`${match.path}/:collectionId`}
           render={(props) => (
             <CollectionPageWithSpinner
-              isLoading={isCollectionFectching}
+              isLoading={!isCollectionLoaded}
               {...props}
             />
           )}
@@ -48,6 +51,7 @@ class StorePage extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
   isCollectionFectching: selectIsCollectionFetching,
+  isCollectionLoaded: selectIsCollectionLoaded,
 });
 
 const mapDispatchToProps = (dispatch) => ({
