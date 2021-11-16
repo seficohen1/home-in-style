@@ -11,14 +11,15 @@ import CollectionPage from './collectionpage';
 import CollectionOverview from '../components/collections-overview/collections-overview';
 import { connect } from 'react-redux';
 import { fetchCollectionStartAsync } from '../redux/shop/shop.actions';
+import { fetchCollectionsStart } from '../redux/shop/shop.actions';
 
 const CollectionPageWithSpinner = WithSpinner(CollectionPage);
 const CollectionOverviewWithSpinner = WithSpinner(CollectionOverview);
 
 class StorePage extends React.Component {
   componentDidMount() {
-    const { fetchCollectionStartAsync } = this.props;
-    fetchCollectionStartAsync();
+    const { fetchCollectionsStart } = this.props;
+    fetchCollectionsStart();
   }
 
   render() {
@@ -52,7 +53,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchCollectionStartAsync: () => dispatch(fetchCollectionStartAsync()),
+  fetchCollectionsStart: () => dispatch(fetchCollectionsStart()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StorePage);
