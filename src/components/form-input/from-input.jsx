@@ -2,15 +2,12 @@ import React from 'react';
 import './form-input.scss';
 
 const FormInput = ({ handleChnge, lable, ...restOfProps }) => {
+  console.log('rest of props', restOfProps.value);
   return (
     <div className="group">
       <input className="form-input" onChange={handleChnge} {...restOfProps} />
       {lable ? (
-        <label
-          className={`${
-            restOfProps.value.length ? 'shrink' : ''
-          } form-input-lable`}
-        >
+        <label className={`${restOfProps ? 'shrink' : ''} form-input-lable`}>
           {lable}
         </label>
       ) : null}
